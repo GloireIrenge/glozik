@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player App</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" src="css/style.css">
+    <title>Gloplayer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center">Music Player App</h1>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <!-- Music track list -->
-                <ul class="list-group mt-3">
-                    <li class="list-group-item">Track 1</li>
-                    <li class="list-group-item">Track 2</li>
-                    <li class="list-group-item">Track 3</li>
-                    <li class="list-group-item">Track 4</li>
-                    <li class="list-group-item">Track 5</li>
-                </ul>
+    <div class="container mt-5">
+        <div class="card text-center">
+            <div class="card-header">
+                Gloplayer
+            </div>
+            <div class="card-body">
+                <h5 class="card-title" id="song-title">No Song Playing</h5>
+                <div class="audio-player">
+                    <audio id="audio-player">
+                        <source id="audio-source" src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="controls">
+                        <button id="prev-button" class="btn btn-primary" onclick="prevSong()">&#9664;</button>
+                        <button id="play-pause-button" class="btn btn-primary" onclick="togglePlayPause()">&#9654;</button>
+                        <button id="next-button" class="btn btn-primary" onclick="nextSong()">&#9654;&#9654;</button>
+                    </div>
+                    <div class="progress mt-3">
+                        <input type="range" id="progress-bar" value="0" min="0" max="100" step="1">
+                    </div>
+                    <div class="mt-3">
+                        <input type="file" id="file-input" multiple>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                © 2024 Goplayer
             </div>
         </div>
-        <!-- Music player controls -->
-        <div class="text-center player-controls">
-            <button class="btn btn-primary">Play</button>
-            <button class="btn btn-secondary">Pause</button>
-            <button class="btn btn-danger">Stop</button>
-        </div>
     </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
