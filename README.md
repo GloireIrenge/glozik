@@ -6,7 +6,7 @@ GloPlayer is a mobile web application to play music from PC.
 
 
 ## Live demo
-https://moonlit-hamster-a02bc8.netlify.app/
+
 
 ## Built With
 - Javascript,
